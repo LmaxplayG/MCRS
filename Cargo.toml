@@ -1,0 +1,20 @@
+[package]
+name = "mcrs"
+version = "0.1.0"
+edition = "2021"
+
+# Optimizations
+[profile.release]
+opt-level = 3
+lto = true
+debug = false
+debug-assertions = false
+overflow-checks = true
+# AVX2 is supported by all modern CPUs, so we can use it to speed up the code
+# See https://en.wikipedia.org/wiki/Advanced_Vector_Extensions#CPUs_with_AVX2
+# The config value
+
+
+[dependencies]
+noise = "0.8.0"
+rayon = "1.6.0"	
